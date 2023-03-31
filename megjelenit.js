@@ -17,7 +17,7 @@ export function adatMegjelenit(lista) {
   txt += "<table class= 'table table-striped table-bordered table-hover'>";
   txt += "<thead class = 'table-dark'><tr>";
   for (const key in kulcsLista){
-    txt += `<th id ='${key}'> ${kulcsLista[key]}</th>`; 
+    txt += `<th id ='tb-${key}'>${kulcsLista[key]}⇅</th>`; 
   }
   txt += "<th></th></tr></thead>"
   for (let index = 0; index < lista.length; index++) {
@@ -26,9 +26,9 @@ export function adatMegjelenit(lista) {
     for (const key in object){
       const element = object[key]
       if(key == nev){
-        txt += `<th> ${element} </th>`
+        txt += `<th>${element}</th>`
       } else {
-        txt += `<td> ${element} </td>`
+        txt += `<td>${element}</td>`
       }
     }
     txt += `<td><button class = 'btn-torol' id="t${index}"> ❌ </button></td>`;
@@ -37,6 +37,5 @@ export function adatMegjelenit(lista) {
   txt += '</table>'
   txt += '</div>'
   
-  let hely = $('article')
-  return hely.append(txt);
+  return txt
 }

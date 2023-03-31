@@ -43,6 +43,6 @@ export const KUTYALISTA = [
 
 export const kulcsLista = {
     nev: "név",
-    kor: "kor",
-    fajta: "fajta"
+    fajta: "fajta",
+    kor: "kor"
 }
