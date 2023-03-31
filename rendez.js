@@ -1,27 +1,24 @@
-import { adatMegjelenit } from "./megjelenit.js";
-
-export function rendezes(lista, kulcs) {
+export function rendezes(lista, kulcs, irany) {
   if (typeof lista[0][kulcs] === "szam") {
-    szamraRendez(lista, kulcs);
+    szamraRendez(lista, irany);
   } else {
-    szovegreRendez(lista, kulcs);
+    szovegreRendez(lista, kulcs, irany);
   }
 }
 
-export function szamraRendez(lista) {
+export function szamraRendez(lista, irany) {
   lista.sort((elso, masodik) => {
     return elso.szam - masodik.szam;
   });
 }
 
-export function szovegreRendez(lista, kulcs) {
+export function szovegreRendez(lista, kulcs, irany) {
   lista.sort((elso, masodik) => {
     let ertek = 1;
     if (elso[kulcs] < masodik[kulcs]) {
       ertek = -1;
-    } else {
-      ertek = 1
     }
-    return ertek;
+    ertek *= irany
+    return ertek
   });
 }
