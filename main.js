@@ -1,6 +1,8 @@
 import { KUTYALISTA } from "./adat.js";
 import { adatMegjelenit } from "./megjelenit.js";
 import { rendezes } from "./rendez.js";
+import { szures } from "./szures.js";
+
 let irany = 1
 
 $(() => {
@@ -22,18 +24,29 @@ function init(){
     init()
   });
   torles(KUTYALISTA)
+  szuresek(KUTYALISTA)
 }
 
 function torles(lista){
   for (let index = 0; index < lista.length; index++) {
     let TOROLELEM = $(`#t-${index}`)
     
-    console.log(TOROLELEM)
     $(TOROLELEM).on("click", function(){
       let toroltElem = event.target.id
       toroltElem = toroltElem.slice(2)
       $(`#sor-${index}`).remove()
-      console.log(toroltElem)
+      lista.splice(index, 1)
     });
   }
+}
+
+
+function szuresek(lista){
+  const NEVRE = $('#nev')
+  $('#nev').on("keyup", ()=>{
+    let nevErtek = NEVRE.val()
+    let szurtLista = szures(lista, "nev", nevErtek)
+    let tartalom = adatMegjelenit(szurtLista)
+    $('table').replaceWith(tartalom)
+  })
 }
