@@ -1,47 +1,56 @@
 export const KUTYALISTA = [
 {
+    kep: "../kepek/kuty11.jpg",
     nev: "Vackó",
-    fajta: "Keverék",
+    fajta: "Agár",
     kor: 8    
 },
 {
+    kep: "../kepek/kuty4.jpg",
     nev: "Széria",
-    fajta: "Tacskó",
+    fajta: "Husky",
     kor: 6    
 },
 {
+    kep: "../kepek/kuty11.jpg",
     nev: "BigBoss",
-    fajta: "Kuvasz",
+    fajta: "Csau-Csau",
     kor: 3    
 },
 {
+    kep: "../kepek/kuty5.jpg",
     nev: "Fickó",
-    fajta: "Rottweiler",
+    fajta: "Cocker Spániel",
     kor: 5    
 },
 {
+    kep: "../kepek/kuty11.jpg",
     nev: "Kulcs",
     fajta: "Rottweiler",
     kor: 8    
 },
 {
+    kep: "../kepek/kuty3.jpg",
     nev: "Bázis",
-    fajta: "Kuvasz",
+    fajta: "Foxterrier",
     kor: 7    
 },
 {
+    kep: "../kepek/kuty1.jpg",
     nev: "Turbó",
-    fajta: "Tacskó",
+    fajta: "Eurázsiai",
     kor: 9    
 },
 {
+    kep: "../kepek/kuty3.jpg",
     nev: "Ubul",
-    fajta: "Tacskó",
+    fajta: "Foxterrier",
     kor: 1    
 },
 ]
 
 export const kulcsLista = {
+    kep: "kép",
     nev: "név",
     fajta: "fajta",
     kor: "kor"

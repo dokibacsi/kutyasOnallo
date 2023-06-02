@@ -1,4 +1,4 @@
-import { kulcsLista } from "./adat.js";
+import { kulcsLista } from "../adat.js";
 
 export function adatMegjelenit(lista) {
 
@@ -16,15 +16,17 @@ export function adatMegjelenit(lista) {
       const element = object[key]
       if(key == nev){
         txt += `<th>${element}</th>`
+      }if(key == kep){
+        txt += `<th><img src=${element}></th>` 
       } else {
         txt += `<td>${element}</td>`
       }
     }
-    txt += `<td><button class = 'btn-torol' id="t-${index}"> ❌ </button></td>`;
+    txt += `<td><button class = 'btn-szerkeszt' id"tt-${index}"> ✏️ </button><button class = 'btn-torol' id="t-${index}"> ❌ </button></td>`;
     txt += `</tr>`    
   }
   txt += '</table>'
   txt += '</div>'
-  
+
   return txt
 }
